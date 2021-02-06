@@ -1,5 +1,6 @@
 var currentMajor = null
 var currentMinor = null
+const NUMBER_OF_MAJORS = 11
 
 var elementCreators = {
     "P0": function (children, index) {
@@ -236,16 +237,16 @@ function getNext(major, minor) {
     var numberOfMinors = getNumberOfMinors(major)
     if (minor < numberOfMinors - 1) 
         return [major, minor + 1]
-    else if (major == 8)
+    else if (major == NUMBER_OF_MAJORS - 1)
         return [-1, -1]
     else
         return [major + 1, 0]
 }
 
 function getContent(major, minor) {
-    if (major > 8)
+    if (major > NUMBER_OF_MAJORS - 1)
         return {
-            "error": "Index of major is out of bounds. There are only 9 majors"
+            "error": "Index of major is out of bounds."
         }
     var majorObject = shulhan.content[major]
     var majorTitle = Object.keys(majorObject)[0]

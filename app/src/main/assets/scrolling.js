@@ -8,7 +8,7 @@ function scrollToCurrent() {
     containerDiv.children().each( (index, child) => {
         var major = parseInt($(child).attr("major"))
         var minor = parseInt($(child).attr("minor"))
-        if (major == 9 || (major == currentMajor && minor == currentMinor))
+        if (major == NUMBER_OF_MAJORS || (major == currentMajor && minor == currentMinor))
             return false
         
         scrollTo += $(contentId(major, minor)).height()
