@@ -12,7 +12,7 @@ function buildMainMenu() {
     }
     currentMajor = 0
     currentMinor = 0
-    updateTitle('סידור תפילה בנוסח הקדום והזך של', 'קהילות קודש תימן יע"א – בלדי')
+    updateTitle('')
     settingsDiv.hide()
     containerDiv.hide()
     menuDiv.show()
