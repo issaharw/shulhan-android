@@ -266,12 +266,15 @@ function getContent(major, minor) {
     }
 }
 
-function createSection(major, minor) {
+function createSection(major, minor, dataPositionsToHighlight = []) {
     var div = $("<div id='content-" + major + "-" + minor + "' major='" + major + "' minor='" + minor + "'>")
     var content = getContent(major, minor).data
     for (var i = 0; i < content.length; i++) {
         var elem = getElement(content[i], i)
         div.append(elem)
+        if (dataPositionsToHighlight.includes(i)) {
+            elem.setAttribute("style", "background-color: #F5EAA9")
+        }
     }
     return div
 }

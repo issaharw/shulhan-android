@@ -75,26 +75,26 @@
 	src: url('SecularOne-Regular.ttf') format('truetype'); 
   }  
 
-.P0 { float: right; width:96%; font-size:7.2rem; font-weight:bold; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.5em; padding-top:0.1em; text-align:center; font-family:"Title Font"; }
-.P0after { clear: both; }
-.P1 { float: right; width:96%; font-size:7.2rem; font-weight:bold; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.5em; padding-top:1em; text-align:center; font-family:"Text Font"; }
-.P1after { clear: both; }
-.P2 { float: center; font-size:3.6rem; font-weight:normal; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.2em; padding-top:0.3em; text-align:center; font-family:"Remark Font"; }
-.P2after { clear: both; }
-.P3 { float: right; font-size:3.6rem; font-weight:normal; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.2em; padding-top:0.3em; text-align:justify; font-family:"Remark Font"; }
-.P3after { clear: both; }
-.P6 { float: right; font-size:4.8rem; font-weight:normal; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.5em; margin-top:0; text-align:justify; font-family:"Text Font"; }
-.P6after { clear: both; }
-.P5 { float: right; font-size:4rem; font-weight:normal; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.5em; margin-top:0; text-align:justify; font-family:"Text Font"; }
-.P5after { clear: both; }
-.C4 { display: inline; }
-.C6 { display: inline; }
-.C5 { display: block; float: right; font-weight:bold; font-size: 1.1em; padding: 0 0 0 0.25em; margin-bottom: 0.5em; margin-top: -0.05em; }
-.C11 { display: inline; font-family:"Remark Font"; font-size:3.6rem; font-style:normal; font-weight:normal; vertical-align: super; }
-.C21 { display: inline; }
-.C31 { display: inline; font-style:normal; font-weight:bold; }
-.a-text { color: inherit;}
-
+  .P0 { float: right; width:96%; font-size:7.2rem; font-weight:bold; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.5em; padding-top:0.1em; text-align:center; font-family:"Title Font"; }
+  .P0after { clear: both; }
+  .P1 { float: right; width:96%; font-size:7.2rem; font-weight:bold; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.5em; padding-top:1em; text-align:center; font-family:"Text Font"; }
+  .P1after { clear: both; }
+  .P2 { float: center; font-size:3.6rem; font-weight:normal; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.2em; padding-top:0.3em; text-align:center; font-family:"Remark Font"; }
+  .P2after { clear: both; }
+  .P3 { float: right; font-size:3.6rem; font-weight:normal; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.2em; padding-top:0.3em; text-align:justify; font-family:"Remark Font"; }
+  .P3after { clear: both; }
+  .P6 { float: right; font-size:4.8rem; font-weight:normal; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.5em; margin-top:0; text-align:justify; font-family:"Text Font"; }
+  .P6after { clear: both; }
+  .P5 { float: right; font-size:4rem; font-weight:normal; margin-left: 2vw; margin-right: 2vw; margin-bottom:0.5em; margin-top:0; text-align:justify; font-family:"Text Font"; }
+  .P5after { clear: both; }
+  .C4 { display: inline; }
+  .C6 { display: inline; }
+  .C5 { display: block; float: right; font-weight:bold; font-size: 1.1em; padding: 0 0 0 0.25em; margin-bottom: 0.5em; margin-top: -0.05em; }
+  .C11 { display: inline; font-family:"Remark Font"; font-size:3.6rem; font-style:normal; font-weight:normal; vertical-align: super; }
+  .C21 { display: inline; }
+  .C31 { display: inline; font-style:normal; font-weight:bold; }
+  .a-text { color: inherit;}
+  
 ::-webkit-scrollbar {
 	display: none;
 }
@@ -159,7 +159,6 @@ body{
 }
 
 .titleDiv {
-	height: 100%;
 	padding-right: 2vw;
 	padding-top: 1vh;
 	vertical-align: middle;
@@ -221,7 +220,7 @@ body{
 	padding-bottom: 0.5vh;
 }
 
-.footerButton {
+.footerButton, .footerSearchButton {
 	border-radius: 10px;
 	background: #426F8C;
 	color: #F8F9FB;  
@@ -238,6 +237,12 @@ div.footerButton > img {
 	padding: 0;
 	max-width:auto;
 	max-height:4vh;
+}
+
+div.footerSearchButton > img {
+	padding: 0.5vh;
+	max-width:auto;
+	max-height:3vh;
 }
 
 .footerText {
@@ -267,6 +272,47 @@ div.footerButton > img {
 
 .nosachteimanLink {
 	color: inherit;
+}
+
+/* --------------------------------------------------------------------------------  
+ ------------------------------------   Search   ------------------------------------  
+ ----------------------------------------------------------------------------------  */
+.searchActions {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 1vh;
+	align-items: center;
+}
+
+.clearSearch {
+	max-width: 1.6vh;
+	max-height: auto;
+
+}
+
+#searchInput {
+	width: 50vw;
+	height: 2.2vh;
+	border-radius: 6px;
+	margin-right: 1vw;
+}
+
+.searchButton {
+	border-radius: 6px;
+	background: #426F8C;
+	color: #F8F9FB;  
+	text-align: center;
+	vertical-align: center;
+	width: 10vw;
+	height: 2.6vh;
+	margin-right: 1.6vw;
+}
+
+div.searchButton > img {
+	padding: 0.3vh;
+	max-width:auto;
+	max-height:2vh;
 }
 
 /* --------------------------------------------------------------------------------  
