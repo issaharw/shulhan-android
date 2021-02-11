@@ -1,4 +1,4 @@
-var shulhanSearch = {
+var contentSearch = {
     "search": [{
         "major": 0,
         "minor": 0,

@@ -1,8 +1,5 @@
 function showSearch() {
-    settingsDiv.hide()    
-    menuDiv.hide()
-    containerDiv.hide()
-    searchDiv.show()
+    showScreen("search")
     var searchText = $("#searchInput").val().trim()
     if (searchText == "")
         updateTitle('חיפוש')
@@ -22,15 +19,15 @@ function search() {
 
 function findText(text) {
     var results = []
-    for(var i = 0; i < shulhanSearch.search.length; i++) {
+    for(var i = 0; i < contentSearch.search.length; i++) {
         var majorMinor = {
-            "major": shulhanSearch.search[i].major,
-            "minor": shulhanSearch.search[i].minor,
-            "title": shulhanSearch.search[i].title,
+            "major": contentSearch.search[i].major,
+            "minor": contentSearch.search[i].minor,
+            "title": contentSearch.search[i].title,
             "dataPositions": []
         }
-        for(var j = 0; j < shulhanSearch.search[i].texts.length; j++) {
-            if (shulhanSearch.search[i].texts[j].includes(text)) {
+        for(var j = 0; j < contentSearch.search[i].texts.length; j++) {
+            if (contentSearch.search[i].texts[j].includes(text)) {
                 majorMinor.dataPositions.push(j)
             }
         }
