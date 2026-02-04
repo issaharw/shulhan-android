@@ -56,19 +56,13 @@
 					<span id="fontSize4" class="fontSizeLink" onclick="setFontSize('#fontSize4', 4)">א</span>
 				</div>
 			</div>
-			<div class="settingsSection">
-				<span class="settingsLabel">שמירת מיקום אוטומטית:</span>
-				<div class="settingsValue">
-					<span id="autoSaveToggle" onclick="toggleAutoSave('#autoSaveToggle')">מופעל</span>
-				</div>
-			</div>
 		</div>
 		<!-- Bookmark Popup Menu -->
 		<div id="bookmarkPopup" class="bookmark-popup" style="display: none;">
 			<div class="bookmark-popup-content">
-				<div class="bookmark-popup-item" onclick="goToLastPosition()">המשך מהמיקום האחרון</div>
+				<div id="popupGoToLast" class="bookmark-popup-item" onclick="goToLastPosition()">המשך מהמיקום האחרון</div>
 				<div class="bookmark-popup-item" onclick="addBookmark()">הוסף סימניה</div>
-				<div class="bookmark-popup-item" onclick="savePosition()">שמור מיקום</div>
+				<div id="popupSavePosition" class="bookmark-popup-item" onclick="savePosition()">שמור מיקום</div>
 				<div class="bookmark-popup-item" onclick="openBookmarks()">צפה בסימניות</div>
 				<div class="bookmark-popup-item bookmark-popup-cancel" onclick="hideBookmarkPopup()">ביטול</div>
 			</div>
